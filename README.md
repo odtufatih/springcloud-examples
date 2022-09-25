@@ -1,1 +1,1 @@
-# Food Order Application is an example microservice application using Spring Cloud framework.
+# This repository contains example microservice applications using Spring Cloud framework.
