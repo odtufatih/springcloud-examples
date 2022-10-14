@@ -19,6 +19,8 @@
     <modules>
         <module>foa-eureka-server</module>
         <module>foa-config-server</module>
+        <module>foa-customer</module>
+        <module>foa-restaurant</module>
     </modules>
 
 

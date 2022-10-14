@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+#used by customer microservice
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      #MYSQL_USER: foa-customer
+      #MYSQL_PASSWORD: foacustomer123
+    ports:
+      - '3306:3306'
+
+#used by restaurant microservice
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+
+#used by restaurant microservice
+  elasticsearch:
+    image: elasticsearch:7.4.2
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+      discovery.type: single-node
