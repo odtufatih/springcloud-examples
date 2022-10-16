@@ -4,6 +4,7 @@ services:
 
 #used by customer microservice
   mysql:
+    container_name: foa-mysql
     image: mysql
     restart: always
     environment:
@@ -15,12 +16,14 @@ services:
 
 #used by restaurant microservice
   mongo:
+    container_name: foa_mongo
     image: mongo
     ports:
       - '27017:27017'
 
 #used by restaurant microservice
   elasticsearch:
+    container_name: foa_elasticsearch
     image: elasticsearch:7.4.2
     ports:
       - '9200:9200'
