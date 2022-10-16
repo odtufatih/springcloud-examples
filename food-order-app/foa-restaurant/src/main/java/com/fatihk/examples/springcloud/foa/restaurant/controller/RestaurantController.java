@@ -7,16 +7,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
+@RestController
 @RequestMapping("/restaurants")
 @RequiredArgsConstructor
 public class RestaurantController {
 
     private final RestaurantService restaurantService;
 
+    @GetMapping("/{id}")
+    public ResponseEntity<RestaurantDto> getRestaurant(@PathVariable String id){
+        return ResponseEntity.ok(restaurantService.getRestaurant(id));
+    }
+
     @GetMapping
-    public ResponseEntity<List<RestaurantDto>> getRestaurants(@PathVariable("city") String city){
+    public ResponseEntity<List<RestaurantDto>> getRestaurants(@RequestParam("city") String city){
         if(city!=null)
             return ResponseEntity.ok(restaurantService.getRestaurantsByAddressCity(city));
         return ResponseEntity.ok(restaurantService.getRestaurants());
@@ -28,8 +35,13 @@ public class RestaurantController {
     }
 
     @PostMapping
-    public ResponseEntity<RestaurantDto> createRestaurant(@RequestBody RestaurantDto restaurantDto){
+    public ResponseEntity<RestaurantDto> createRestaurant(@RequestBody @Valid RestaurantDto restaurantDto){
         return new ResponseEntity<>(restaurantService.createRestaurant(restaurantDto), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<RestaurantDto> updateRestaurant(@PathVariable("id") String id, @RequestBody @Valid RestaurantDto restaurantDto){
+        return new ResponseEntity<>(restaurantService.updateRestaurant(id, restaurantDto), HttpStatus.OK);
     }
 
 }

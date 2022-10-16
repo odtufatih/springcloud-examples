@@ -25,4 +25,10 @@ public class RestaurantEsService {
         restaurantEsRepository.save(restaurantEs);
     }
 
+    public void updateRestaurant(String dbId, RestaurantEs restaurantEs){
+        RestaurantEs restaurantEsDb = restaurantEsRepository.findByDbId(dbId);
+        restaurantEs.setId(restaurantEsDb.getId());
+        restaurantEs.setDbId(dbId);
+        restaurantEsRepository.save(restaurantEs);
+    }
 }

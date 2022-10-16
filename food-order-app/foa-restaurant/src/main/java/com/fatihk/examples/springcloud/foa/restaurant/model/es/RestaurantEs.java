@@ -18,6 +18,10 @@ public class RestaurantEs {
     @Id
     private String id;
 
+    private String dbId; // corresponding mongodb record id
+
+    private String name;
+
     @Field(type = FieldType.Nested, includeInParent = true)
     private AddressEs address;
 
@@ -34,6 +38,9 @@ public class RestaurantEs {
         private String address;
     }
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class MenuItemEs{
         private String name;
         private BigDecimal price;

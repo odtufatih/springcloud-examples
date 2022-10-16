@@ -1,5 +1,6 @@
 package com.fatihk.examples.springcloud.foa.restaurant.model.entity;
 
+import co.elastic.clients.elasticsearch.xpack.usage.Base;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,10 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Restaurant {
-
-    @Id
-    private String id = UUID.randomUUID().toString();
+public class Restaurant extends BaseEntity {
 
     private String name;
 
@@ -34,6 +32,9 @@ public class Restaurant {
         private String address;
     }
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class MenuItem{
         private String name;
         private BigDecimal price;

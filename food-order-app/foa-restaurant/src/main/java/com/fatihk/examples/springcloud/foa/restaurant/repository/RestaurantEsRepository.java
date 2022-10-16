@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface RestaurantEsRepository extends ElasticsearchRepository<RestaurantEs, String> {
 
+    RestaurantEs findByDbId(String dbId);
+
     List<RestaurantEs> findByAddressCity(String city);
 
     List<RestaurantEs> findByMenuItemsNameLikeOrMenuItemsCategoryLike(String menuItemName, String menuItemCategory);
