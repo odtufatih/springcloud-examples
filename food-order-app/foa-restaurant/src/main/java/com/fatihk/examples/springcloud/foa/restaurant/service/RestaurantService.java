@@ -1,6 +1,7 @@
 package com.fatihk.examples.springcloud.foa.restaurant.service;
 
-import com.fatihk.examples.springcloud.foa.restaurant.model.dto.RestaurantDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.RestaurantDto;
+import com.fatihk.examples.springcloud.foa.restaurant.exception.ResourceNotFoundException;
 import com.fatihk.examples.springcloud.foa.restaurant.model.entity.Restaurant;
 import com.fatihk.examples.springcloud.foa.restaurant.model.es.RestaurantEs;
 import com.fatihk.examples.springcloud.foa.restaurant.repository.RestaurantRepository;
@@ -8,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import com.fatihk.examples.springcloud.foa.restaurant.exception.ResourceNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;

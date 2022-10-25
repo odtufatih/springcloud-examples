@@ -1,25 +1,24 @@
-package com.fatihk.examples.springcloud.foa.customer.model.dto;
+package com.fatihk.examples.springcloud.foa.order.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
+import java.math.BigDecimal;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class AddressDto {
+public class OrderItemDto {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY) //this is important, this makes id field to be visible and used only in get responses, we hide it for create/update(post/put) endpoints in swagger api documentation
-    private long id;
+    private String id;
 
-    @NotBlank
-    private String city;
+    private String itemName;
 
-    @NotBlank
-    private String address;
+    private BigDecimal itemPrice;
 
-    @NotBlank
-    private String customerId;
+    private int itemCount;
 
 }

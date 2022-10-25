@@ -1,7 +1,7 @@
 package com.fatihk.examples.springcloud.foa.customer.service.impl;
 
+import com.fatihk.examples.springcloud.foa.common.model.dto.AddressDto;
 import com.fatihk.examples.springcloud.foa.customer.exception.ResourceNotFoundException;
-import com.fatihk.examples.springcloud.foa.customer.model.dto.AddressDto;
 import com.fatihk.examples.springcloud.foa.customer.model.dto.CustomerDto;
 import com.fatihk.examples.springcloud.foa.customer.model.entity.Customer;
 import com.fatihk.examples.springcloud.foa.customer.repository.AddressRepository;

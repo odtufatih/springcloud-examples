@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.customer.service;
 
-import com.fatihk.examples.springcloud.foa.customer.model.dto.AddressDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.AddressDto;
 
 public interface IAddressService {
 

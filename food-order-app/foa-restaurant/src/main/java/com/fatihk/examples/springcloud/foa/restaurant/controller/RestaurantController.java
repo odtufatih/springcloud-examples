@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.restaurant.controller;
 
-import com.fatihk.examples.springcloud.foa.restaurant.model.dto.RestaurantDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.RestaurantDto;
 import com.fatihk.examples.springcloud.foa.restaurant.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

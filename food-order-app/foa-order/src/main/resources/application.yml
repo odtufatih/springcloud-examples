@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: foa-order
+  config:
+    import: configserver:http://localhost:8888

@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.customer.controller;
 
-import com.fatihk.examples.springcloud.foa.customer.model.dto.AddressDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.AddressDto;
 import com.fatihk.examples.springcloud.foa.customer.service.IAddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ public class AddressController {
     private final IAddressService addressService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<AddressDto> getCustomer(@PathVariable("id") long id){
+    public ResponseEntity<AddressDto> getAddress(@PathVariable("id") long id){
         return ResponseEntity.ok(addressService.getAddress(id));
     }
 

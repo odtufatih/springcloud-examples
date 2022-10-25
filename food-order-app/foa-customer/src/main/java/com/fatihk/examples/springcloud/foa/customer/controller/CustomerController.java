@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.customer.controller;
 
-import com.fatihk.examples.springcloud.foa.customer.model.dto.AddressDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.AddressDto;
 import com.fatihk.examples.springcloud.foa.customer.model.dto.CustomerDto;
 import com.fatihk.examples.springcloud.foa.customer.service.ICustomerService;
 import lombok.RequiredArgsConstructor;

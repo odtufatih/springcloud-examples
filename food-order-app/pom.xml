@@ -21,6 +21,8 @@
         <module>foa-config-server</module>
         <module>foa-customer</module>
         <module>foa-restaurant</module>
+        <module>foa-order</module>
+        <module>foa-service-common</module>
     </modules>
 
 

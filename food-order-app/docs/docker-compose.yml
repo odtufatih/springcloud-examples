@@ -30,3 +30,28 @@ services:
       - '9300:9300'
     environment:
       discovery.type: single-node
+
+#used by order microservice
+  db:
+    container_name: foa_postgresql
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: admin
+
+#sql client for postgresql/mysql
+  adminer:
+    container_name: foa_adminer
+    image: adminer
+    restart: always
+    ports:
+      - 9080:8080
+
+#zipkin server for tracing
+  zipkin:
+    container_name: foa_zipkin
+    image: openzipkin/zipkin
+    ports:
+      - 9411:9411
