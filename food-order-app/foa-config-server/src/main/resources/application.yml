@@ -6,5 +6,6 @@ spring:
     config:
       server:
         git:
-          uri: file:///D:/Development/git/fatihk_repos/spring-cloud-config-repo
+          uri: https://github.com/odtufatih/spring-cloud-config-repo
           searchPaths: foa
+          default-label: master
