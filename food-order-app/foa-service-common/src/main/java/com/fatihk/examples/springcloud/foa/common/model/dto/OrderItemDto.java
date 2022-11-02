@@ -1,4 +1,4 @@
-package com.fatihk.examples.springcloud.foa.order.model.dto;
+package com.fatihk.examples.springcloud.foa.common.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.order.service;
 
-import com.fatihk.examples.springcloud.foa.order.model.dto.OrderDto;
+import com.fatihk.examples.springcloud.foa.common.model.dto.OrderDto;
 
 import java.util.List;
 

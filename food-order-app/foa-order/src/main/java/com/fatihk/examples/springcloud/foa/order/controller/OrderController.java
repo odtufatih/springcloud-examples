@@ -1,6 +1,5 @@
 package com.fatihk.examples.springcloud.foa.order.controller;
 
-import com.fatihk.examples.springcloud.foa.order.model.dto.OrderDto;
 import com.fatihk.examples.springcloud.foa.order.service.IOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

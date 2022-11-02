@@ -1,17 +1,11 @@
-package com.fatihk.examples.springcloud.foa.order.model.dto;
+package com.fatihk.examples.springcloud.foa.common.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fatihk.examples.springcloud.foa.order.model.entity.OrderItem;
 import com.fatihk.examples.springcloud.foa.order.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Enumerated;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.util.Set;
