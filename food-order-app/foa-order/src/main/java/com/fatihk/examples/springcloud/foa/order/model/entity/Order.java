@@ -1,6 +1,6 @@
 package com.fatihk.examples.springcloud.foa.order.model.entity;
 
-import com.fatihk.examples.springcloud.foa.order.model.enums.OrderStatus;
+import com.fatihk.examples.springcloud.foa.common.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.fatihk.examples.springcloud.foa.order.model.enums;
+package com.fatihk.examples.springcloud.foa.common.model.enums;
 
 public enum OrderStatus {
     RECEIVED,

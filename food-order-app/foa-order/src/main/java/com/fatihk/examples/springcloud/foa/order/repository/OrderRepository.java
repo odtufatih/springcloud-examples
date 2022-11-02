@@ -1,7 +1,7 @@
 package com.fatihk.examples.springcloud.foa.order.repository;
 
+import com.fatihk.examples.springcloud.foa.common.model.enums.OrderStatus;
 import com.fatihk.examples.springcloud.foa.order.model.entity.Order;
-import com.fatihk.examples.springcloud.foa.order.model.enums.OrderStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

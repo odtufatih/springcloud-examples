@@ -1,7 +1,7 @@
 package com.fatihk.examples.springcloud.foa.common.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fatihk.examples.springcloud.foa.order.model.enums.OrderStatus;
+import com.fatihk.examples.springcloud.foa.common.model.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
