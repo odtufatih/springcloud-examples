@@ -49,9 +49,20 @@ services:
     ports:
       - 9080:8080
 
+  msrabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=foa
+      - RABBITMQ_DEFAULT_PASS=foa
+
 #zipkin server for tracing
   zipkin:
     container_name: foa_zipkin
     image: openzipkin/zipkin
     ports:
       - 9411:9411
+
+

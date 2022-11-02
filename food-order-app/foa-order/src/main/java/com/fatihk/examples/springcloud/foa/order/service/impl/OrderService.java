@@ -11,6 +11,8 @@ import com.fatihk.examples.springcloud.foa.order.repository.OrderRepository;
 import com.fatihk.examples.springcloud.foa.order.service.IOrderService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,6 +29,8 @@ public class OrderService implements IOrderService {
     private final CustomerServiceClient customerServiceClient;
 
     private final RestaurantServiceClient restaurantServiceClient;
+
+    private final StreamBridge streamBridge;
 
     @Override
     public List<OrderDto> getOrders(String customerId, boolean onlyActive) {
@@ -85,6 +89,9 @@ public class OrderService implements IOrderService {
         });
         orderRepository.save(order);
         orderDto.setOrderId(order.getId());
+
+        streamBridge.send("orderCreatedEventSupplier-out-0", orderDto);
+
         return orderDto;
     }
 
